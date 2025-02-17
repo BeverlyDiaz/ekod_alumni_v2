@@ -68,8 +68,6 @@ class ScaffoldWithNavigationBar extends StatelessWidget {
         onTap: onTap,
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
         // selectedItemColor: Colors.red,
         // unselectedItemColor: AppColors.mediumGrey,
         // selectedLabelStyle: context.textTheme.titleSmall,
@@ -78,14 +76,36 @@ class ScaffoldWithNavigationBar extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: const Icon(
-              Icons.home,
+              Icons.newspaper,
               size: _iconSize,
             ),
             activeIcon: const Icon(
-              Icons.home,
+              Icons.newspaper,
               size: _iconSize,
             ),
-            label: 'Accueil',
+            label: 'Actualités',
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(
+              Icons.work,
+              size: _iconSize,
+            ),
+            activeIcon: const Icon(
+              Icons.work,
+              size: _iconSize,
+            ),
+            label: 'Offres',
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(
+              Icons.book,
+              size: _iconSize,
+            ),
+            activeIcon: const Icon(
+              Icons.book,
+              size: _iconSize,
+            ),
+            label: 'Annuaires',
           ),
           BottomNavigationBarItem(
             icon: const Icon(
@@ -125,15 +145,16 @@ class ScaffoldWithNavigationRail extends StatelessWidget {
             backgroundColor: Colors.red,
             selectedIconTheme: IconThemeData(color: Colors.red),
             unselectedIconTheme: IconThemeData(color: Colors.white),
+            unselectedLabelTextStyle: TextStyle(color: Colors.white),
             selectedLabelTextStyle: TextStyle(color: Colors.white),
             selectedIndex: currentIndex,
-            onDestinationSelected: onDestinationSelected,
+            indicatorColor: Colors.white,
             labelType: NavigationRailLabelType.all,
             destinations: <NavigationRailDestination>[
               NavigationRailDestination(
-                icon: const Icon(Icons.home),
-                selectedIcon: const Icon(Icons.home),
-                label: Text('Accueil'),
+                icon: const Icon(Icons.newspaper),
+                selectedIcon: const Icon(Icons.newspaper),
+                label: Text('Actualités'),
               ),
               NavigationRailDestination(
                 icon: const Icon(Icons.cases_outlined),
@@ -147,7 +168,6 @@ class ScaffoldWithNavigationRail extends StatelessWidget {
               ),
             ],
           ),
-          const VerticalDivider(thickness: 1, width: 2),
           // This is the main content
           Expanded(child: body),
         ],

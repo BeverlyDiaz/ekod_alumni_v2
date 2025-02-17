@@ -8,7 +8,7 @@ class CustomTitle extends StatelessWidget {
   const CustomTitle({
     super.key,
     this.title = "Titre",
-    this.size = 24,
+    this.size = 30,
     this.color = Colors.black,
   });
 

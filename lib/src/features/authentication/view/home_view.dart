@@ -1,4 +1,4 @@
-import 'package:ekod_alumni/src/widgets/text.dart';
+import 'package:ekod_alumni/src/widgets/title.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,9 +9,21 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CustomText(
-            text: 'Home',
-          )
+          Padding(
+            padding: EdgeInsets.all(30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomTitle(
+                  title: 'Les actualités',
+                ),
+                Image.asset(
+                  'assets/images/avatar.png',
+                  height: 70,
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
